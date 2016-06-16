@@ -3,11 +3,14 @@ package observerpattern;
 /**
  * Created by Oleksandra_Dmytrenko on 6/15/2016.
  */
-public interface Subject {
+public abstract class Subject {
+    Information information;
 
-    void notifyAllObservers();
+    abstract void notifyAllObservers();
 
-    void registerObserver(Observer o);
+    abstract void registerObserver(Observer o);
 
-    void unregisterObserver(Observer o);
-}
+    abstract void unregisterObserver(Observer o);
+
+    public  abstract void setInformation(Information information);
+    }

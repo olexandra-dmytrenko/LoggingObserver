@@ -5,5 +5,6 @@ package observerpattern;
  */
 public interface Observer {
 
-    void update();
-}
+    void fireUpdate();
+    void setInformation(Information information);
+    }
