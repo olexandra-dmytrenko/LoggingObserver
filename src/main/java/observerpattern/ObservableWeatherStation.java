@@ -6,9 +6,8 @@ import java.util.List;
 /**
  * Created by Oleksandra_Dmytrenko on 6/15/2016.
  */
-public class SubjectWeatherStation extends Subject {
-Information information;
-    List<Observer> observers = new ArrayList<>();
+ class ObservableWeatherStation extends Observable {
+   private List<Observer> observers = new ArrayList<>();
 
     public void notifyAllObservers() {
         observers.stream().forEach(o -> o.setInformation(information));

@@ -3,8 +3,13 @@ package observerpattern;
 /**
  * Created by Oleksandra_Dmytrenko on 6/15/2016.
  */
-public interface Observer {
+abstract class Observer {
 
-    void fireUpdate();
-    void setInformation(Information information);
+    private Information information;
+
+    abstract void fireUpdate();
+
+    public void setInformation(Information information) {
+        this.information = information;
     }
+}

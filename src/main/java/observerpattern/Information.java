@@ -5,6 +5,6 @@ package observerpattern;
  * This is a marker interface to say that we deal with some certain type of data
  */
 
-public interface Information {
-String toString();
+interface Information {
+    String toString();
 }

@@ -5,21 +5,27 @@ import java.util.Random;
 /**
  * Created by Oleksandra_Dmytrenko on 6/16/2016.
  */
-public class Weather implements Information{
+ class Weather implements Information {
     private double temperature;
     private double humidity;
     private double pressure;
 
-    public Weather() {
-        new Weather(generateValueFromTo(-20, 40),
+    Weather() {
+        this(
+                generateValueFromTo(-20, 40),
                 generateValueFromTo(0, 100),
                 generateValueFromTo(700, 800));
     }
 
-    public Weather(double temperature, double humidity, double pressure) {
+    Weather(double temperature, double humidity, double pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
+    }
+
+    private static double generateValueFromTo(double min, double max) {
+        Random r = new Random();
+        return r.nextDouble() * ((max - min) + 1) + min;
     }
 
     public double getTemperature() {
@@ -53,10 +59,5 @@ public class Weather implements Information{
                 ", humidity=" + humidity +
                 ", pressure=" + pressure +
                 '}';
-    }
-
-    private double generateValueFromTo(double min, double max) {
-        Random r = new Random();
-        return r.nextDouble() + ((max - min) + 1) + min;
     }
 }

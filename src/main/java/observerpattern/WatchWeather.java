@@ -5,7 +5,7 @@ package observerpattern;
  */
 public class WatchWeather {
     public static void main(String[] args) {
-        Subject weatherStation = new SubjectWeatherStation();
+        Observable weatherStation = new ObservableWeatherStation();
 
         ObserverWeatherChannel weatherChannel = new ObserverWeatherChannel();
         weatherStation.registerObserver(weatherChannel);
