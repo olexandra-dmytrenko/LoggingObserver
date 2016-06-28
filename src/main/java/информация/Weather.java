@@ -1,5 +1,7 @@
 package информация;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Random;
 
 /**
@@ -9,6 +11,7 @@ import java.util.Random;
     private double temperature;
     private double humidity;
     private double pressure;
+    private static final NumberFormat DECIMAL_FORMAT = new DecimalFormat("#.00");
 
     public Weather() {
         this(
@@ -25,7 +28,8 @@ import java.util.Random;
 
     private static double generateValueFromTo(double min, double max) {
         Random r = new Random();
-        return r.nextDouble() * ((max - min) + 1) + min;
+        double newParameter = r.nextDouble() * ((max - min) + 1) + min;
+        return Double.parseDouble(DECIMAL_FORMAT.format(newParameter));
     }
 
     public double getTemperature() {

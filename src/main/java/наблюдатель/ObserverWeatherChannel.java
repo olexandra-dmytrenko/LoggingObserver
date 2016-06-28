@@ -9,7 +9,7 @@ public class ObserverWeatherChannel extends Observer{
     @Override
     public void fireUpdate() {
         super.fireUpdate();
-        System.out.printf("New feed: " + getInformation());
+        System.out.println("New feed: " + getInformation());
         Logger.getLogger(this.getClass().getName()).info("Закончил передачу информации");
     }
 }
