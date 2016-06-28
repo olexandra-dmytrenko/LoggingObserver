@@ -1,5 +1,10 @@
 package observerpattern;
 
+import интересующий.Observable;
+import интересующий.ObservableWeatherStation;
+import информация.Weather;
+import наблюдатель.ObserverWeatherChannel;
+
 /**
  * Created by Oleksandra_Dmytrenko on 6/15/2016.
  */
