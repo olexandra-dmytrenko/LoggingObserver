@@ -1,11 +1,10 @@
 package observerpattern;
 
+import org.apache.log4j.Logger;
 import интересующий.Observable;
 import интересующий.ObservableWeatherStation;
 import информация.Weather;
 import наблюдатель.ObserverWeatherChannel;
-
-import java.util.logging.Logger;
 
 /**
  * Created by Oleksandra_Dmytrenko on 6/15/2016.
