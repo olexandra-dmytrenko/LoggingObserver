@@ -9,7 +9,7 @@ public class Slf4jLogging {
 
     //The root logger resides at the top of the logger hierarchy.
     // It always exists, cannot be retrieved by name.
-    private static Logger logger = LoggerFactory.getLogger(Slf4jLogging.class.getName());
+    private static Logger logger = LoggerFactory.getLogger(Slf4jLogging.class);
 
 
     public static void main(String[] args) {
